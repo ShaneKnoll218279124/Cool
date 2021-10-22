@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ PAGE</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<style>
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+
+.faq-page {
+   
+    color: blue;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+
+}
+.faq-body{
+    margin: auto;
+    
+   width: 50%; 
+   padding: auto;
+   
+}
+
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+
+
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+   
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+   
+}
+
+
+</style>
+</head>
+
+<body>
+    <main>
+
+       
+		<div style ="text-align:center;">
+		<img src="images/faq.jpg" width="400" height="200">
+		</div>
+        <section class="faq-container">
+            <div class="faq-one">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How does a student create an account?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>A student can create their own account with their student email and password.
+					
+					</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-two">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How does a Employer create an account?</h1>
+
+                <!-- faq answer -->
+
+                <div class="faq-body">
+                    <p>Employer can create their account with their email and password.
+					</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+
+            <div class="faq-three">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How does a Co-ordinator create an account?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Co-ordinator can create their account with their email and password.</p>
+                </div>
+            
+			
+			<hr class="hr-line">
+            </div>
+
+
+            <div class="faq-four">
+
+                <!-- faq question -->
+                <h1 class="faq-page">What's the purpose of the DashBoard?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>The purpose of the Dashboard is to provide students and lecturers alike, a single, online-based platform
+                       for the management of the Work Integrated Learning(WIL) program. This will seek to streamline the process of student information
+                    distribution & management, for the WIL program. </p>
+                </div>
+				
+				
+				
+				 <hr class="hr-line">
+            </div>
+
+
+            <div class="faq-five">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How to contact for more information?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>For more information, please contact the subject coordinator using the following details:
+                        <p> </p>
+                       <br>Name: Ms Prima Inderlal</br>
+                       <br>Faculty: Informatics & Design (Information Technology)</br>
+                       <br>Tel: 0219596911</br>
+                       <br>Email: inderlalp@cput.ac.za</br></p>
+                </div>
+            
+			
+			<hr class="hr-line">
+				
+			</div>
+
+
+                <div class="faq-six">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">In what format should all documents be uploaded in?</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>All documents should be uploaded in PDF form.</p>
+                    </div>
+
+                    <hr class="hr-line">
+                </div>
+
+
+                    <div class="faq-seven">
+
+                        <!-- faq question -->
+                        <h1 class="faq-page">Who do I contact if the site isn't working correctly?</h1>
+
+                        <!-- faq answer -->
+                        <div class="faq-body">
+                            <p>If basic user troubleshooting such as refreshing the page or exiting and re-entering the site doesn't solve the problem,
+                                please contact the tech support (CTS) using the following details:
+                            <p>
+                            <br>Tel: +27 21 959 6407 (ext 6407)</br>
+                            <br>Email: ctsservicedesk@cput.ac.za</br></p>
+                        </div>
+                    </div>
+
+                        <hr class="hr-line">
+
+                        <div class="faq-eight">
+
+                            <!-- faq question -->
+                            <h1 class="faq-page">How will I be notified/contacted?</h1>
+
+                            <!-- faq answer -->
+                            <div class="faq-body">
+                                <p>The email address you signed up with, will be used to notify/contact you when necessary.</p>
+                            </div>
+                        </div>
+
+
+
+
+
+        </section>
+    </main>
+    <script>
+	var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+       
+        this.classList.toggle("active");
+
+        
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+	</script>
+</body>
+
+<scrip></scrip>
+</html>
